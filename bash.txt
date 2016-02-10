@@ -1,0 +1,73 @@
+#
+#
+#
+
+#
+bash cheetsheet
+
+http://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/
+http://ss64.com/bash/syntax-keyboard.html
+http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/
+http://teohm.com/blog/2012/01/04/shortcuts-to-move-faster-in-bash-command-line/
+http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time-saving-shortcuts
+
+
+
+#
+# copy file structure to destination
+#
+
+svn status | awk '{printf "%s\n", $2}' | grep -e ".*\.cpp$" -e ".*\.h$" | xargs tar cvf - | (cd ../r48733_bkp ; tar xfp -)
+
+
+
+#
+# patch
+#
+
+# create patch
+svn diff TSES/ > STANDALONE.patch
+
+# apply patch (-p0: explicitly tell to strip 0 components from file names)
+patch -p0 -i STANDALONE.patch
+
+# undo patch
+patch -R -p0 -i STANDALONE.patch
+
+
+#
+# grep
+#
+
+grep -r "searchstring" <path>
+grep -r --include="*.cpp" --exclude-dir="*_test_*" -e "searchstring" 
+
+#
+# find
+#
+
+find . -name "*.so"
+
+# directory
+find . -type d -name arm
+
+
+#
+# zip
+#
+
+zip -r myfiles.zip myfiles
+
+
+#
+# tar
+#
+
+# backup folder
+tar -cvjf V1.4.0.tar.bz2 V1.4.0/
+
+
+#
+#
+#
+

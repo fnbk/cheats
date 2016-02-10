@@ -1,0 +1,17 @@
+
+#
+# highlight without filtering
+#
+
+#
+grep --color -E 'patter0|pattern1|$'
+
+# example
+grep -rn -e "Heading field of NavSolutionQualityObject was not set" -e "onSegmentMapMatchingResult: PseudoMatch" -e "onSegmentMapMatchingResult: MatchQualifier" -e "correcting stillstand"  -e "onSegmentMapMatchingResult: correct MMResult" -e "begin handle position from queue with gps time" . |  sed 's/^[-\.\/a-Z0-9]*:[0-9]*://' | sort | grep --color -E 'NavSolutionQualityObject|begin handle position from queue|$'
+
+
+#
+#
+#
+
+

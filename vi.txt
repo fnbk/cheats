@@ -1,0 +1,96 @@
+
+
+#
+# controlling vim
+#
+
+# quit all windows opened by vimdiff
+:qa
+
+
+#
+# hex mode
+#
+
+# switch to hex mode
+:%!xxd
+
+# switch back to hex
+:%!xxd -r
+
+
+#
+# duplicate lines
+#
+
+:%s/.*/&\r&
+
+
+#
+# sort
+#
+
+:sort
+
+# split by ":", sort by second column, sort by number
+:!sort -k ":" -k2 -n
+
+
+#
+# global
+#
+
+# delete every line matching 'profile'
+:g/profile/d
+
+# delete every line not matching 'profile'
+:!g/profile/d
+
+
+
+#
+# vimdiff
+#
+
+vimdiff <file> <file>
+
+:diffput
+:diffget
+
+
+# diff obtain
+do
+
+# diff put
+dp
+
+
+# https://gist.github.com/mattratleph/4026987
+]c :        - next difference
+[c :        - previous difference
+do          - diff obtain
+dp          - diff put
+zo          - open folded text
+zc          - close folded text
+:diffupdate - re-scan the files for differences
+
+
+# copy and paste word
+yiw ... yank, inner, word
+viwp ... visual select, inner, word, paste
+viw"0p ... visual select, inner word, content of 0 register, paste
+
+#
+# set
+#
+
+# parallel scrolling (split screen and go to right screen)
+set scrollbind
+set scrollbind!
+
+# line numbers
+set nu
+set nonu
+
+
+

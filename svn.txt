@@ -1,0 +1,153 @@
+#
+# links
+#
+
+# git and svn commands compared
+http://git.or.cz/course/svn.html
+
+# svn quick guide
+http://www.tutorialspoint.com/svn/svn_quick_guide.htm
+
+#
+# basics
+#
+
+# help: status symbols
+svn help status
+
+svn info
+
+svn status
+svn status -u <path>
+
+svn diff
+
+svn log
+
+svn add <files>
+
+svn commit -m 'commit message'
+
+#
+# reset
+#
+
+svn revert (<folder>)
+
+# reset all changes
+svn revert --depth infinity .
+svn revert -R .
+
+# remove untracked files
+svn status | rm -rf $(awk '/^?/{$1 = ""; print $0}')
+svn status | awk '/^?/{$1 = ""; print $0}'
+
+
+#
+# checkout and stuff
+#
+
+# git pull
+svn update
+
+# git clone, svn checkout (co)
+svn checkout http://svn.server.com/svn/project_repo --username=tom
+
+#
+# update
+#
+
+# checkout older revision
+svn up -r107176
+
+
+#
+# merging
+#
+
+# resolve conflicts
+svn resolve --accept=working README
+
+
+# undo last commit
+svn merge -c -lastrevision .
+svn merge -c -91628 CMakefile.txt
+svn merge -c -91654 -c -91657 -c -91658
+
+
+
+#
+# fix mistakes
+#
+
+# throw away changes
+svn revert array.c 
+
+# go up one revision
+svn up 
+
+
+#
+# copy file structure to destination
+#
+
+svn status | awk '{printf "%s\n", $2}' | grep -e ".*\.cpp$" -e ".*\.h$" | xargs tar cvf - | (cd ../r48733_bkp ; tar xfp -)
+
+
+
+#
+# svn branches
+#
+
+svn copy <url> <url>
+svn update
+
+
+# list directories
+svn list <url>
+
+
+#
+# svn patch
+#
+
+# create patch
+svn diff > abc.patch
+
+# apply patch
+svn patch abc.patch --dry-run
+
+
+#
+# diff
+#
+
+# show only files
+diff -r --brief V1.3.0/ V1.4.0/
+
+
+
+# commit
+svn commit -m "abc" some_path
+
+#
+# svn log
+#
+
+# show log messages
+svn log -v --limit 5
+
+
+
+#
+# workflow: 
+#
+
+# check for upstream changes
+svn st -u V1.3/
+
+# get upstream changes
+svn up V1.3/
+
+
+

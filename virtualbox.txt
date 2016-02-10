@@ -1,0 +1,49 @@
+#
+# virtual box general settings
+#
+
+# stop box
+vboxmanage controlvm OBUMarco_Suse13.1 reset
+
+
+# start box headless
+vboxmanage startvm OBUMarco_Suse13.1 --type headless
+
+
+# forward port [TODO]
+vboxmanage modifyvm OBUMarco_Suse13.1 --natpf1 "guestssh,tcp,,2222,,22"
+
+# login
+ssh -p 3020 developer@127.0.0.1
+
+
+#
+# mount shared folder
+#
+
+# add shared folder over virtual box frontend
+settings->Shared Folders
+add, set Auto-mount option
+
+# linux
+sudo mkdir /mnt/shared
+sudo chmod 777 /mnt/shared
+sudo mount -t vboxsf -o uid=1000,gid=1000 daimler_material_db_sharedfolder /mnt/shared
+sudo mount -t vboxsf -o uid=1000,gid=1000 balluff_safetyhub_sharedfolder /mnt/shared
+
+
+#
+# build OBU
+#
+
+export OBU_SW=florian
+./build.sh TSAB_arm
+
+
+#
+# fix broken VM clipboard
+#
+
+rm /home/developer/.vboxclient-clipboard.pid
+VBoxClient --clipboard
+

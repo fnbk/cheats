@@ -1,0 +1,5 @@
+
+
+# separator: wihitespace; print $3
+awk '{print $3}'
+
