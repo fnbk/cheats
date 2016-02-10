@@ -93,4 +93,21 @@ set nu
 set nonu
 
 
+#
+# using macros
+#
+
+# record macro
+q # start recording
+a # into register 'a'
+<sequence> # sequence to record
+<Esc> # get out of insert mode
+q # stop recording
+
+example:
+qaA;<Esc>q # add ';' to the end of line
+
+# repeat last command on visual selection
+<visual selection> :normal @a # repeat by replaying macro a
+<visual selection> :normal .  # repeat last command
 
