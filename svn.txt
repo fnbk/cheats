@@ -125,10 +125,20 @@ svn patch abc.patch --dry-run
 # show only files
 diff -r --brief V1.3.0/ V1.4.0/
 
+# show changes in revision
+svn diff -c <revision> path/to/repo
+svn diff -c r19881 .
+
+# show changed files for revision
+svn log -v -r r19881
 
 
+#
 # commit
+#
+
 svn commit -m "abc" some_path
+
 
 #
 # svn log

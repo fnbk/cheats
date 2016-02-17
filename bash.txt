@@ -68,6 +68,23 @@ tar -cvjf V1.4.0.tar.bz2 V1.4.0/
 
 
 #
+# sort
 #
+
+# sort by time
+ll -t
+
+# last 20 entries, sorted by change time
+ll -t | head -n 20
+
+
 #
+# pipe
+#
+
+# pipe stderr to stdout
+./run.sh 2>&1
+
+# pipe stdout and stderr to file
+./run.sh &> run.log
 

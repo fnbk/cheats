@@ -23,8 +23,11 @@
 # duplicate lines
 #
 
+# duplicate lines
 :%s/.*/&\r&
 
+# remove duplicate lines
+:sort u
 
 #
 # sort
@@ -110,4 +113,23 @@ qaA;<Esc>q # add ';' to the end of line
 # repeat last command on visual selection
 <visual selection> :normal @a # repeat by replaying macro a
 <visual selection> :normal .  # repeat last command
+
+
+#
+# global search and replace
+#
+
+# display all lines matching "abc"
+:g/abc/p
+
+# delete all lines matching "abc"
+:g/abc/d
+
+# display all lines not matching "abc"
+:v/abc/p
+
+# delete all lines matching "abc"
+:v/abc/d
+
+
 

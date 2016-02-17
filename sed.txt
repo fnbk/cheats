@@ -4,6 +4,9 @@
 # remove filename prefix
 #
 
+# replace inline/file
+sed -i -e 's/xxx/zzz/g' <files>
+
 #
 grep -rn " ERROR " . | sed 's/^[-\.\/a-Z0-9]*:[0-9]*://' | sort
 
