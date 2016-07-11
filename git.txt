@@ -1,0 +1,8 @@
+
+#
+# roll back
+#
+
+# keep history, add new 'rollback'-commit
+git revert --no-commit 0766c053..HEAD
+git commit
