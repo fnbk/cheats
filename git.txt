@@ -3,6 +3,6 @@
 # roll back
 #
 
-# keep history, add new 'rollback'-commit
+# keep history, add new 'rollback'-commit http://stackoverflow.com/a/21718540/5011904
 git revert --no-commit 0766c053..HEAD
 git commit
