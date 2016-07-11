@@ -6,3 +6,32 @@
 # keep history, add new 'rollback'-commit http://stackoverflow.com/a/21718540/5011904
 git revert --no-commit 0766c053..HEAD
 git commit
+
+
+#
+# multiple ssh keys
+#
+
+# links
+http://stackoverflow.com/a/21718540/5011904
+http://goo.gl/wjVbYO
+
+# ls ~/.ssh
+config
+github_id_rsa
+github_id_rsa.pub
+id_rsa
+id_rsa.pub
+
+# .ssh/config
+Host github.com
+    IdentityFile ~/.ssh/github_id_rsa
+
+# set correct email for github.com repositories
+git clonse git@github.com:fnbk/cheats.git
+cd cheats
+git config user.email "florian@xxx"
+
+
+
+
