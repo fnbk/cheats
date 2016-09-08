@@ -7,6 +7,8 @@
 git revert --no-commit 0766c053..HEAD
 git commit
 
+# roll back last commit, keep local changes
+git reset HEAD~
 
 #
 # multiple ssh keys
@@ -33,5 +35,17 @@ cd cheats
 git config user.email "florian@xxx"
 
 
+#
+# partial commit or interactive staging
+#
+
+# console
+git add --interactive
+* select what to do: patch
+* select which files to patch
+* press enter to choose which part of the file to add to staging
+source: https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
 
 
+# vimdiff
+TODO
