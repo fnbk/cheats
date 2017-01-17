@@ -4,7 +4,7 @@
 #
 
 # keep history, add new 'rollback'-commit http://stackoverflow.com/a/21718540/5011904
-git revert --no-commit 0766c053..HEAD
+git revert 0766c053..HEAD --no-commit
 git commit
 
 # roll back last commit, keep local changes
