@@ -34,6 +34,9 @@ git clonse git@github.com:fnbk/cheats.git
 cd cheats
 git config user.email "florian@xxx"
 
+# debug access rights
+ssh -T -v git@bitbucket.org
+
 
 #
 # partial commit or interactive staging
