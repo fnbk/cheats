@@ -1,5 +1,11 @@
 
 #
+# log
+#
+
+git log --graph --decorate --oneline
+
+#
 # roll back
 #
 
