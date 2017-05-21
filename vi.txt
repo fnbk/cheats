@@ -131,5 +131,7 @@ qaA;<Esc>q # add ';' to the end of line
 # delete all lines matching "abc"
 :v/abc/d
 
+# replace with newline: ctrl + v + <Enter>
+:%s/ || //g
 
 
