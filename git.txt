@@ -16,6 +16,14 @@ git commit
 # roll back last commit, keep local changes
 git reset HEAD~
 
+# roll back using git diff
+git diff deb40bb..7a01000 | git apply # negative diff
+
+# cherry pick
+git diff 2fbaee7^..8198d56 | git apply
+git cherry-pick 2fbaee7 --no-commit
+
+
 #
 # multiple ssh keys
 #
