@@ -63,6 +63,15 @@ git add --interactive
 * press enter to choose which part of the file to add to staging
 source: https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
 
+#
+# squash commits
+#
+
+# squash B into A
+git rebase -i HEAD~2
+
+pick 01d1124 A
+squash 6340aaa B
 
 # vimdiff
 TODO
