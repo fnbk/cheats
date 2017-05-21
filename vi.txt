@@ -135,3 +135,16 @@ qaA;<Esc>q # add ';' to the end of line
 :%s/ || //g
 
 
+
+#
+# navigating through vim-help
+#
+
+# tags stack: jumping through tags
+Ctrl-] # follow tag
+Ctrl-T # go to previous tag
+
+# jumplist:
+Ctrl-I # jump in
+Ctrl-O # jump out
+
