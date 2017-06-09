@@ -1,0 +1,19 @@
+
+mongodump  --host <host:port> --db pbk-api --archive > archive.db
+cat archive.db | mongorestore --host <host:port> --archive
+
+
+#
+# copy collection
+#
+
+mongoexport --host <host:port> --db testFrom --collection yourCollection --out test.json
+mongoimport --host <host:port> --db testTo --collection yourCollection --file test.json
+
+
+#
+# copy database
+#
+
+mongodump  --host <host:port> --db pbk-api --archive --out archive.db
+mongorestore --host <host:port> --archive archive.db
