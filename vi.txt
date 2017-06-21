@@ -148,3 +148,11 @@ Ctrl-T # go to previous tag
 Ctrl-I # jump in
 Ctrl-O # jump out
 
+
+#
+# code indention when pasting from clipboard
+#
+
+:set paste # disable
+:set nopaste # activate
+
