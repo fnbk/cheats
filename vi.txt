@@ -156,3 +156,16 @@ Ctrl-O # jump out
 :set paste # disable
 :set nopaste # activate
 
+
+#
+# vim, ex, ed and other tools
+#
+
+# ed
+https://sanctum.geek.nz/arabesque/actually-using-ed/
+http://www.gnu.org/software/ed/manual/ed_manual.html
+
+# ex
+https://docs.freebsd.org/44doc/usd/10.exref/paper.pdf
+https://docstore.mik.ua/orelly/unix/vi/ch05_01.htm#VI6-CH-5-SECT-1
+

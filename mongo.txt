@@ -7,13 +7,13 @@ cat archive.db | mongorestore --host <host:port> --archive
 # copy collection
 #
 
-mongoexport --host <host:port> --db testFrom --collection yourCollection --out test.json
-mongoimport --host <host:port> --db testTo --collection yourCollection --file test.json
-
+mongoexport --db={databaseName} --host={host} --port={port} --collection={collectionName} --out={outputFile}
+mongoimport --db={databaseName} --host={host} --port={port} --collection={collectionName} --file={outputFile}
 
 #
 # copy database
 #
 
-mongodump  --host <host:port> --db pbk-api --archive --out archive.db
-mongorestore --host <host:port> --archive archive.db
+mongodump --host <host:port> --db pbk-api --archive=mein_archiv.db
+mongorestore --host <host:port> --archive=mein_archiv.db
+
