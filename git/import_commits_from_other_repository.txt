@@ -1,0 +1,35 @@
+
+
+
+# add the 'pim' repo as a remote repository 
+git remote add pim https://github.com/fnbk/pim.git
+
+# get the 'pim' repo commits
+git remote update
+
+# examine the whole tree in reverse order
+git log --format=format:%H | tail -r # in reverse order
+
+# checkout new branch
+git checkout -b pim
+
+# copy (cherry-pick) the commits from the old repo into your new local one
+git cherry-pick sha-of-commit-one
+git cherry-pick sha-of-commit-two
+git cherry-pick sha-of-commit-three
+
+# go back to master and merge branch in a separate commits
+git checkout master
+git merge --no-ff pim
+
+# check your local repo is correct
+git log
+
+# send your new tree (repo state) to github
+git push origin master
+
+# remove the now-unneeded reference to pim
+git remote remove pim
+
+source:
+https://stackoverflow.com/a/37474065/5011904
