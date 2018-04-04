@@ -83,3 +83,11 @@ TODO
 
 # show diff of a commit: git diff hash^..hash
 git diff 304636ea90b45b95e9731ba12943812c21040474^..304636ea90b45b95e9731ba12943812c21040474
+
+
+#
+# amend
+#
+
+# Adding more changes to your last commit
+git commit --amend
