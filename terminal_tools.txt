@@ -1,0 +1,7 @@
+
+Download Youtube videos
+
+```
+brew install youtube-dl
+youtube-dl --recode-video mp4 "https://www.youtube.com/watch?v=qPgqgHnFZcY"
+```
