@@ -5,3 +5,10 @@ Download Youtube videos
 brew install youtube-dl
 youtube-dl --recode-video mp4 "https://www.youtube.com/watch?v=qPgqgHnFZcY"
 ```
+
+Parse JSON on Commandline
+```
+brew install jq
+aws ec2 run-instances --image-id ami-28422647 --count 1 --instance-type t2.medium --key-name frankfurt-rancher --security-group-ids sg-a83164c5 | jq .Instances[0].InstanceId
+aws ec2 describe-instances --instance-id i-0fa663fff73ba534f | jq .Reservations[0].Instances[0].PublicIpAddress
+```
