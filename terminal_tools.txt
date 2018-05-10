@@ -35,4 +35,9 @@ expect scripts
 https://www.lifewire.com/linus-unix-command-expect-2201096
 ```
 
+http tool: user friendly command line tool
+```
+brew install httpie
+http google.com
+```
 
