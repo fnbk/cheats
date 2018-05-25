@@ -41,3 +41,8 @@ brew install httpie
 http google.com
 ```
 
+tree - display directory structure
+```
+# directory level 2, ignore patter doc*, marketing, README.md
+tree . -L 2 -I 'doc*|marketing|README.md'
+```
