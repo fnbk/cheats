@@ -1,9 +1,6 @@
 #
+# bash cheetsheet
 #
-#
-
-#
-bash cheetsheet
 
 http://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/
 http://ss64.com/bash/syntax-keyboard.html
@@ -11,6 +8,12 @@ http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/
 http://teohm.com/blog/2012/01/04/shortcuts-to-move-faster-in-bash-command-line/
 http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time-saving-shortcuts
 
+
+#
+# bash utilities and libraries
+#
+
+https://github.com/gruntwork-io/bash-commons
 
 
 #
