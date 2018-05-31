@@ -91,3 +91,36 @@ ll -t | head -n 20
 # pipe stdout and stderr to file
 ./run.sh &> run.log
 
+
+#
+# format console output
+#
+
+# ansi escape sequences
+```
+echo -e '\033[0mNORMAL STRING \033[1mBOLD STRING \033[0mNORMAL STRING'
+```
+```
+bold () {
+    echo -e "\033[1m$@\033[0m"
+}
+bold_cyan () {
+    echo -e "\033[0;36m\033[1m$@\033[0m"
+}
+bold hello world
+bold_cyan hello world
+```
+source:
+https://stackoverflow.com/a/42449998/5011904
+http://ascii-table.com/ansi-escape-sequences-vt-100.php
+https://unix.stackexchange.com/a/158421
+
+# tput utility
+bold=$(tput bold)
+normal=$(tput sgr0)
+echo "this is ${bold}bold${normal} but this isn't"
+
+source:
+https://stackoverflow.com/a/2924755/5011904
+
+
